@@ -1,4 +1,4 @@
-DROP DATABASE extra_assignment_1;
+DROP DATABASE IF EXISTS extra_assignment_1;
 CREATE DATABASE extra_assignment_1;
 USE extra_assignment_1;
 
@@ -26,5 +26,5 @@ id 					VARCHAR(50),
 `name` 				VARCHAR(50),
 birth_date 			DATE,
 gender 				ENUM('male','female' , 'unknown'),
-is_deleted_flag 	ENUM(
+is_deleted_flag 	ENUM('means active', 'means deleted.')
 );
