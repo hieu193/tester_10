@@ -33,9 +33,10 @@ FOREIGN KEY(creator_id) REFERENCES `Account`(account_id)
 );
 
 CREATE TABLE group_account(
-group_id 		TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-account_id 		INT UNSIGNED ,
-join_date 		DATE
+group_id 		TINYINT UNSIGNED,
+account_id 		INT UNSIGNED,
+join_date 		DATE,
+PRIMARY KEY(group_id,account_id)
 );
 
 CREATE TABLE type_question(
@@ -83,6 +84,7 @@ FOREIGN KEY(creator_id) REFERENCES `Account`(account_id)
 );
 
 CREATE TABLE Exam_Question(
-exam_id 		INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-question_id 	INT UNSIGNED 
+exam_id 		INT UNSIGNED,
+question_id 	INT UNSIGNED, 
+PRIMARY KEY(exam_id,question_id)
 );
